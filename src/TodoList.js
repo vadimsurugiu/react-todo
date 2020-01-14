@@ -8,7 +8,8 @@ class TodoList extends React.Component {
     super()
     this.state = {
       todos: [],
-      todosToShow: 'all'
+      todosToShow: 'all',
+      activeId: "1"
     }
   }
 
@@ -72,12 +73,12 @@ class TodoList extends React.Component {
           ))}
         </div>
         <div>
-          todos left: {this.state.todos.filter(todo => !todo.complete).length}
+          todos left: <b>{this.state.todos.filter(todo => !todo.complete).length}</b>
         </div>
         <div>
-          <button onClick={() => this.updateTodoToShow("all")}>all</button>
-          <button onClick={() => this.updateTodoToShow("active")}>active</button>
-          <button onClick={() => this.updateTodoToShow("complete")}>complete</button>
+          <button activekey="1" className={this.state.activeId == this.props.activekey ? 'is-active' : ''} onClick={() => this.updateTodoToShow("all")}>all</button>
+          <button activekey="2" className={this.state.activeId == this.props.activekey ? 'is-active' : ''} onClick={() => this.updateTodoToShow("active")}>active</button>
+          <button activekey="3" className={this.state.activeId == this.props.activekey ? 'is-active' : ''} onClick={() => this.updateTodoToShow("complete")}>complete</button>
         </div>
       </div>
     )

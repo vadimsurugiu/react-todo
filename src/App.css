@@ -99,7 +99,27 @@
   margin-bottom: 15px;
   padding: 15px;
   border: 1px solid #1E90FF;
+  border-bottom: 2px solid #1E90FF;
   width: 100%;
+}
+.todo div {
+  cursor: pointer;
+}
+.todo button {
+  cursor: pointer;
+  margin-left: 15px;
+  border-radius: 50%;
+  border: 1px solid #1E90FF;
+  background: #FFF;
+  color: #1E90FF;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.todo button:hover {
+  background: #1E90FF;
+  color: #FFF;
 }
 .todo__complete {
   text-decoration: line-through;
